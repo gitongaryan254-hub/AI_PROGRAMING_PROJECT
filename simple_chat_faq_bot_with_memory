@@ -1,0 +1,371 @@
+import re
+import json
+import os
+
+MEMORY_FILE = "memory.json"
+
+def normalize(text: str) -> str:
+    return re.sub(r"\s+", " ", text.strip().lower())
+
+def load_memory():
+    if not os.path.exists(MEMORY_FILE):
+        return []
+    try:
+        with open(MEMORY_FILE, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        if isinstance(data, list):
+            return data
+        return []
+    except Exception:
+        return []
+
+def save_memory(memory_list):
+    try:
+        with open(MEMORY_FILE, "w", encoding="utf-8") as f:
+            json.dump(memory_list, f, indent=2, ensure_ascii=False)
+    except Exception as e:
+        print(f"(Memory warning) Could not save memory: {e}")
+
+def remember(memory_list, user_text, bot_text):
+    memory_list.append({"user": user_text, "bot": bot_text})
+    save_memory(memory_list)
+
+def print_welcome():
+    print("=" * 70)
+    print("   🤖 Cyber Helper Bot (with JSON memory)")
+    print("=" * 70)
+    print("Hello 😊 I'm your calm assistant for cybersecurity, education, Python and Git.")
+    print("You can ask me things like:")
+    print(" - how do i register")
+    print(" - what is cybersecurity")
+    print(" - do i need coding")
+    print(" - how to use python or git")
+    print(" - how to push to github")
+    print("Type 'help' to see what I can do.")
+    print("Type 'history' to see a short summary of this session.")
+    print("Type 'exit' or 'quit' to leave the chat.")
+    print("-" * 70)
+
+def get_response(user_input: str) -> str:
+    text = normalize(user_input)
+
+    if text in {"exit", "quit", "bye", "goodbye"}:
+        return "Thank you for chatting with me. I wish you a smooth learning journey. 🌱"
+
+    # HELLO / SMALL TALK
+    if "hello" in text or "hi" in text or "hey" in text:
+        return "Hello! 😊 How can I help you with your studies, registration, cybersecurity, Python, or Git today?"
+
+    if "how are you" in text:
+        return "I’m doing well, thank you for asking. I’m here to support you—how can I assist you today?"
+
+    if "who are you" in text or "what are you" in text:
+        return "I am a friendly FAQ bot created to help students with cybersecurity, programming, Git, registration, and general school questions."
+
+    if "thank" in text:
+        return "You’re very welcome. I’m glad I could assist you. If you have another question, feel free to ask."
+
+    # REGISTRATION & ADMIN
+    if "register" in text or "enroll" in text:
+        return (
+            "To register, log in to the student portal, open the 'Courses' or 'Registration' section, "
+            "search for your course and click 'Enroll'. If you get stuck, kindly take a screenshot and "
+            "contact the ICT or registrar's office so they can guide you step by step."
+        )
+
+    if "deadline" in text or "last day" in text:
+        return (
+            "Registration deadlines are set by the registrar each semester. Please check the latest academic "
+            "calendar on the school website or student portal, or confirm directly with the registrar’s office."
+        )
+
+    if "fees" in text or "payment" in text or "school fees" in text:
+        return (
+            "For fee details, please refer to the official fee structure from the finance office or the school website. "
+            "Most courses are part of your normal program fees, but extra certifications may have separate charges."
+        )
+
+    if "portal" in text and ("login" in text or "log in" in text):
+        return (
+            "If you cannot log in to the portal, first confirm your username and password, then try the 'Forgot password' option. "
+            "If it still fails, kindly visit or email the ICT helpdesk so they can reset your account."
+        )
+
+    # APPLICATION & ADMISSION
+    if ("apply" in text or "application" in text) and ("course" in text or "program" in text):
+        return (
+            "To apply for a course, go to the school website and open the 'Admissions' or 'Apply Now' section. "
+            "Fill in the form, upload your documents, and follow the payment instructions. If you need help, "
+            "contact the admissions or registrar’s office."
+        )
+
+    if "qualifications" in text or "eligible" in text or "eligibility" in text:
+        return (
+            "Most programs require a secondary school certificate and sometimes a minimum grade or entrance exam. "
+            "Please check your school’s official requirements on the website or ask the admissions office for exact details."
+        )
+
+    if "documents" in text and ("required" in text or "needed" in text):
+        return (
+            "Common documents are: ID or birth certificate, secondary school transcripts, proof of payment, and sometimes "
+            "recommendation letters or a personal statement. Always confirm with the official admission checklist."
+        )
+
+    if "start date" in text or "course begin" in text or "when does" in text:
+        return (
+            "Courses usually start at the beginning of each semester. Check the academic calendar or your admission letter "
+            "for the exact start date."
+        )
+
+    if "scholarship" in text or "financial aid" in text or "funding" in text:
+        return (
+            "For scholarships and financial aid, visit the finance or student services office or the school website. "
+            "Look for scholarship and bursary sections, and note the application deadlines carefully."
+        )
+
+    # COURSE STRUCTURE & STUDY LOAD
+    if "hours" in text or "per week" in text or "workload" in text:
+        return (
+            "Plan around 6–10 hours per week for a technical course: watching lessons, doing labs, and revising. "
+            "Small, regular study sessions work better than last‑minute cramming."
+        )
+
+    if "duration" in text or "how long" in text:
+        return (
+            "Most standard courses run for one semester or a few months. Short trainings or bootcamps are more intensive "
+            "and can last from a few days to a few weeks."
+        )
+
+    if "prerequisite" in text or "requirements" in text or "requirement" in text:
+        return (
+            "Beginner courses usually require only basic computer skills. Advanced courses may require prior programming, "
+            "math, or networking knowledge. Check the course description or syllabus for the official list."
+        )
+
+    if "exam" in text or "assessment" in text or "test" in text:
+        return (
+            "Assessments can include quizzes, labs, assignments, projects, midterms, and final exams. Your course syllabus "
+            "explains how each part contributes to your final grade."
+        )
+
+    if "grade" in text or "marks" in text or "scoring" in text:
+        return (
+            "Grades are often based on participation, assignments, labs, projects, quizzes, and exams. Check your syllabus or "
+            "student portal for the exact grading breakdown."
+        )
+
+    if "online" in text or "physical" in text or "mode" in text:
+        return (
+            "Courses may be online, physical, or blended. Please check your timetable or course outline to see the mode for your class."
+        )
+
+    # CYBERSECURITY BASICS
+    if "what is cybersecurity" in text or ("cybersecurity" in text and "what" in text):
+        return (
+            "Cybersecurity is protecting computers, networks, and data from attacks, damage, or unauthorized access. "
+            "It is like putting locks, alarms, and guards around your digital information."
+        )
+
+    if "why is cybersecurity important" in text or ("important" in text and "cyber" in text):
+        return (
+            "Cybersecurity is important because our money, records, and communication are online. Good security helps prevent "
+            "fraud, data leaks, and serious damage to people and organizations."
+        )
+
+    if "hard" in text and "cyber" in text:
+        return (
+            "Cybersecurity can feel hard at the beginning, but it becomes easier when you take it step by step and keep practicing. "
+            "Feeling confused at first is normal, not a sign that you are weak."
+        )
+
+    # GENERAL STUDY TIPS
+    if "how to study" in text or "study tips" in text or "how do i pass" in text:
+        return (
+            "Make a simple weekly plan, study a bit every day, and always practice questions or labs after you learn new theory. "
+            "Use short notes, quizzes, or flashcards, and ask questions early when something is not clear."
+        )
+
+    if "tutor" in text or "tutoring" in text or "extra help" in text:
+        return (
+            "Ask if your school has a tutoring or learning support center. You can also attend instructor office hours "
+            "and form a study group with classmates for extra support."
+        )
+
+    # PYTHON – BASICS
+    if "what is python" in text:
+        return (
+            "Python is a popular, beginner‑friendly programming language used for web development, data analysis, automation, "
+            "AI, and cybersecurity scripting. It is known for simple, readable code."
+        )
+
+    if "install python" in text or "how to install python" in text:
+        return (
+            "To install Python: go to python.org, download the latest stable version, run the installer, and select "
+            "'Add Python to PATH'. On Linux, use your package manager such as apt or dnf."
+        )
+
+    if "run python" in text or "use python" in text or ("python" in text and "idle" in text):
+        return (
+            "To run Python: open IDLE or VS Code, create a file ending with .py, write your code, then run it. "
+            "In VS Code, install the Python extension, open your file, and press Run ▶ or run 'python yourfile.py' in the terminal."
+        )
+
+    if "learn python" in text or "start python" in text:
+        return (
+            "Start with basics: variables, input/output, if‑statements, loops, functions, and lists. Practice small problems daily "
+            "and build tiny projects like calculators or text‑based games."
+        )
+
+    # GIT & GITHUB – CONCEPTS
+    if "what is git" in text:
+        return (
+            "Git is a version control system. It helps you track changes in your code, go back to older versions, "
+            "and collaborate with others safely."
+        )
+
+    if "what is github" in text:
+        return (
+            "GitHub is a website that hosts Git repositories in the cloud. It lets you store your projects online, share them, "
+            "and work together with other developers."
+        )
+
+    if "git vs github" in text or ("difference" in text and "git" in text and "github" in text):
+        return (
+            "Git is the tool on your computer that manages versions of your code. GitHub is an online service where those "
+            "Git repositories are stored and shared."
+        )
+
+    # GIT – BASICS
+    if "install git" in text:
+        return (
+            "To install Git: on Windows, download from git-scm.com and run the installer. On Linux, use your package manager, "
+            "for example: sudo apt install git. On Mac, you can use Homebrew: brew install git."
+        )
+
+    if "git config" in text or "set username" in text or "set email" in text:
+        return (
+            "To set your Git identity, run:\n"
+            "git config --global user.name \"Your Name\"\n"
+            "git config --global user.email \"your_email@example.com\""
+        )
+
+    if "git init" in text or "create repository" in text or "start repository" in text:
+        return (
+            "To start a new Git repo:\n"
+            "1) Open a terminal in your project folder.\n"
+            "2) Run: git init\n"
+            "3) Run: git add .\n"
+            "4) Run: git commit -m \"Initial commit\""
+        )
+
+    if "git add" in text:
+        return "git add stages your changes. Example: git add file.py or git add . to stage all changed files."
+
+    if "git commit" in text:
+        return (
+            "git commit saves a snapshot of your staged changes. Example:\n"
+            "git commit -m \"Describe what you changed\""
+        )
+
+    if "git status" in text:
+        return "git status shows which files are changed, staged, or untracked."
+
+    if "git log" in text:
+        return "git log shows the history of commits in your repository."
+
+    if "git clone" in text:
+        return (
+            "git clone copies a remote repository to your machine. Example:\n"
+            "git clone https://github.com/USERNAME/REPO.git"
+        )
+
+    if "git pull" in text:
+        return (
+            "git pull fetches new commits from the remote repository and merges them into your current branch."
+        )
+
+    if "push to github" in text or "how to push" in text or ("git" in text and "github" in text and "push" in text):
+        return (
+            "Basic push steps:\n"
+            "1) git init\n"
+            "2) git add .\n"
+            "3) git commit -m \"first commit\"\n"
+            "4) git remote add origin https://github.com/USERNAME/REPO.git\n"
+            "5) git push -u origin main"
+        )
+
+    if "git remote add" in text or "set remote" in text:
+        return (
+            "To link your local repo to GitHub:\n"
+            "git remote add origin https://github.com/USERNAME/REPO.git"
+        )
+
+    if "git push" in text and "origin" in text:
+        return (
+            "git push origin main sends your local commits to the 'main' branch on GitHub. Use -u the first time:\n"
+            "git push -u origin main\n"
+            "After that, you can just run: git push"
+        )
+
+    if "git commands" in text or "all git commands" in text or "basic git" in text:
+        return (
+            "Common Git commands:\n"
+            "git init  → start a repo\n"
+            "git status  → see changes\n"
+            "git add .  → stage changes\n"
+            "git commit -m \"msg\"  → save snapshot\n"
+            "git log  → see history\n"
+            "git remote add origin URL  → link to GitHub\n"
+            "git push -u origin main  → push\n"
+            "git pull  → get latest\n"
+            "git clone URL  → copy a repo"
+        )
+
+    if text == "help":
+        return (
+            "I can help with: registration, admission, fees, scholarships, study tips, cybersecurity basics, "
+            "Python basics, Git and GitHub commands, and general school questions. Just ask in simple English!"
+        )
+
+    return (
+        "Thank you for your question. I'm not fully sure I understand it yet. "
+        "Could you kindly rephrase it in a simple way so I can help you better?"
+    )
+
+def main():
+    memory = load_memory()
+    print_welcome()
+
+    while True:
+        try:
+            user_input = input("\nYou: ").strip()
+            if not user_input:
+                continue
+
+            low = normalize(user_input)
+
+            if low == "history":
+                if not memory:
+                    print("Bot: I don't have any saved history yet in memory.json.")
+                else:
+                    print(f"Bot: I currently remember {len(memory)} message pairs in memory.json.")
+                continue
+
+            if low in {"exit", "quit", "bye", "goodbye"}:
+                bot_reply = get_response(user_input)
+                print(f"Bot: {bot_reply}")
+                remember(memory, user_input, bot_reply)
+                break
+
+            bot_reply = get_response(user_input)
+            print(f"Bot: {bot_reply}")
+            remember(memory, user_input, bot_reply)
+
+        except KeyboardInterrupt:
+            print("\n\nBot: Thank you for chatting. Goodbye! 👋")
+            break
+        except Exception as e:
+            print(f"Bot: Oops, something went wrong: {e}. Please try again.")
+
+if __name__ == "__main__":
+    main()

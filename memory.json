@@ -1,0 +1,86 @@
+[
+  {
+    "user": "hey",
+    "bot": "Hello! 😊 How can I help you with your studies, registration, cybersecurity, Python, or Git today?"
+  },
+  {
+    "user": "git comands",
+    "bot": "Thank you for your question. I'm not fully sure I understand it yet. Could you kindly rephrase it in a simple way so I can help you better?"
+  },
+  {
+    "user": "help me to understand git comands",
+    "bot": "Thank you for your question. I'm not fully sure I understand it yet. Could you kindly rephrase it in a simple way so I can help you better?"
+  },
+  {
+    "user": "C:\\Users\\HP\\AppData\\Roaming\\uv\\python\\cpython-3.14.3-windows-x86_64-none\\python.exe \"c:/Users/HP/OneDrive/Documents/updated chat bot 1/train_intent_model.py\"",
+    "bot": "Courses may be online, physical, or blended. Please check your timetable or course outline to see the mode for your class."
+  },
+  {
+    "user": "C:\\Users\\HP\\AppData\\Roaming\\uv\\python\\cpython-3.14.3-windows-x86_64-none\\python.exe \"c:/Users/HP/OneDrive/Documents/updated chat bot 1/train_intent_model.py\"",
+    "bot": "Courses may be online, physical, or blended. Please check your timetable or course outline to see the mode for your class."
+  },
+  {
+    "user": "hey",
+    "bot": "Hello! 😊 How can I help you with your studies, registration, cybersecurity, Python, or Git today?"
+  },
+  {
+    "user": "help me with git",
+    "bot": "Thank you for your question. I'm not fully sure I understand it yet. Could you kindly rephrase it in a simple way so I can help you better?"
+  },
+  {
+    "user": "C:\\Users\\HP\\AppData\\Roaming\\uv\\python\\cpython-3.14.3-windows-x86_64-none\\python.exe \"c:/Users/HP/OneDrive/Documents/updated chat bot 1/simple_chat_faq_bot_with_memory\"",
+    "bot": "Thank you for your question. I'm not fully sure I understand it yet. Could you kindly rephrase it in a simple way so I can help you better?"
+  },
+  {
+    "user": "morning",
+    "bot": "Thank you for your question. I'm not fully sure I understand it yet. Could you kindly rephrase it in a simple way so I can help you better?"
+  },
+  {
+    "user": "hey",
+    "bot": "Hello! 😊 How can I help you with your studies, registration, cybersecurity, Python, or Git today?"
+  },
+  {
+    "user": "git commands",
+    "bot": "Common Git commands:\ngit init  → start a repo\ngit status  → see changes\ngit add .  → stage changes\ngit commit -m \"msg\"  → save snapshot\ngit log  → see history\ngit remote add origin URL  → link to GitHub\ngit push -u origin main  → push\ngit pull  → get latest\ngit clone URL  → copy a repo"
+  },
+  {
+    "user": "C:\\Users\\HP\\AppData\\Roaming\\uv\\python\\cpython-3.14.3-windows-x86_64-none\\python.exe \"c:/Users/HP/OneDrive/Documents/updated chat bot 1/chat_bot_nlp.py\"",
+    "bot": "Thank you for your question. I'm not fully sure I understand it yet. Could you kindly rephrase it in a simple way so I can help you better?"
+  },
+  {
+    "user": "hello",
+    "bot": "Hello! 😊 How can I help you with your studies, registration, cybersecurity, Python, or Git today?"
+  },
+  {
+    "user": "bye",
+    "bot": "Thank you for chatting with me. I wish you a smooth learning journey. 🌱"
+  },
+  {
+    "user": "hello",
+    "bot": "Hello! 😊 How can I help you with your studies, registration, cybersecurity, Python, or Git today?"
+  },
+  {
+    "user": "bye",
+    "bot": "Thank you for chatting with me. I wish you a smooth learning journey. 🌱"
+  },
+  {
+    "user": "how to use git",
+    "bot": "Thank you for your question. I'm not fully sure I understand it yet. Could you kindly rephrase it in a simple way so I can help you better?"
+  },
+  {
+    "user": "bye",
+    "bot": "Thank you for chatting with me. I wish you a smooth learning journey. 🌱"
+  },
+  {
+    "user": "bye",
+    "bot": "Thank you for chatting with me. I wish you a smooth learning journey. 🌱"
+  },
+  {
+    "user": "hello",
+    "bot": "Hello! 😊 How can I help you with your studies, registration, cybersecurity, Python, or Git today?"
+  },
+  {
+    "user": "git comands",
+    "bot": "Thank you for your question. I'm not fully sure I understand it yet. Could you kindly rephrase it in a simple way so I can help you better?"
+  }
+]
