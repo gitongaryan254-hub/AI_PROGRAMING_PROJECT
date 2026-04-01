@@ -1,0 +1,102 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["hi", "hey", "hello", "good morning", "good afternoon", "yo"],
+      "responses": [
+        "Hello! 😊 How can I help you with your studies, registration, cybersecurity, Python, or Git today?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["bye", "goodbye", "see you", "talk later"],
+      "responses": [
+        "Thank you for chatting with me. I wish you a smooth learning journey. 🌱"
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["thanks", "thank you", "thnx", "appreciate it"],
+      "responses": [
+        "You’re very welcome. I’m glad I could assist you. If you have another question, feel free to ask."
+      ]
+    },
+    {
+      "tag": "register",
+      "patterns": ["how do i register", "how to enroll", "register for course", "enroll in class"],
+      "responses": [
+        "To register, log in to the student portal, open the 'Courses' or 'Registration' section, search for your course, and click 'Enroll'. If you get stuck, kindly take a screenshot and contact the ICT or registrar's office so they can guide you step by step."
+      ]
+    },
+    {
+      "tag": "fees",
+      "patterns": ["how much are the fees", "school fees", "payment for the course", "do i pay extra"],
+      "responses": [
+        "For fee details, please refer to the official fee structure from the finance office or the school website. Most courses are part of your normal program fees, but extra certifications may have separate charges."
+      ]
+    },
+    {
+      "tag": "scholarship",
+      "patterns": ["are there scholarships", "financial aid", "bursary for this course", "can i get funding"],
+      "responses": [
+        "For scholarships and financial aid, visit the finance or student services office or the school website. Look for scholarship and bursary sections, and note the application deadlines carefully."
+      ]
+    },
+    {
+      "tag": "cyber_basics",
+      "patterns": ["what is cybersecurity", "explain cyber security", "why is cybersecurity important", "is cybersecurity hard"],
+      "responses": [
+        "Cybersecurity is protecting computers, networks, and data from attacks, damage, or unauthorized access. It can feel hard at the beginning, but when you take it step by step and practice, it becomes much easier."
+      ]
+    },
+    {
+      "tag": "study_tips",
+      "patterns": ["how do i study", "study tips", "how to pass this course", "i am failing to study"],
+      "responses": [
+        "Make a simple weekly plan, study a bit every day, and practice questions or labs after learning new theory. Use short notes or flashcards, and ask questions early when something is not clear."
+      ]
+    },
+    {
+      "tag": "python_basics",
+      "patterns": ["what is python", "how to start python", "learn python", "use python idle"],
+      "responses": [
+        "Python is a beginner‑friendly programming language used for web development, data analysis, automation, AI, and cybersecurity. Start with variables, if‑statements, loops, functions, and lists, and practice small problems daily."
+      ]
+    },
+    {
+      "tag": "python_run",
+      "patterns": ["how do i run python code", "run python script", "run .py file", "execute python in vs code"],
+      "responses": [
+        "To run Python: open IDLE or VS Code, create a file ending with .py, write your code, then run it. In VS Code, install the Python extension and press Run ▶ or use the terminal: python yourfile.py."
+      ]
+    },
+    {
+      "tag": "git_concept",
+      "patterns": ["what is git", "difference between git and github", "what is github"],
+      "responses": [
+        "Git is a version control system that tracks changes in your code. GitHub is an online platform that hosts Git repositories in the cloud so you can store and share your projects."
+      ]
+    },
+    {
+      "tag": "git_push",
+      "patterns": ["how do i push to github", "push code to github", "upload project to github"],
+      "responses": [
+        "Basic push steps:\n1) git init\n2) git add .\n3) git commit -m \"first commit\"\n4) git remote add origin https://github.com/USERNAME/REPO.git\n5) git push -u origin main"
+      ]
+    },
+    {
+      "tag": "git_commands",
+      "patterns": ["basic git commands", "all git commands i need", "git cheat sheet"],
+      "responses": [
+        "Common Git commands:\n- git init → start a repo\n- git status → see changes\n- git add . → stage changes\n- git commit -m \"msg\" → save snapshot\n- git log → see history\n- git remote add origin URL → link to GitHub\n- git push -u origin main → push\n- git pull → get latest\n- git clone URL → copy a repo"
+      ]
+    },
+    {
+      "tag": "default_fallback",
+      "patterns": ["random text 1", "random text 2"],
+      "responses": [
+        "Thank you for your question. I'm not fully sure I understand it yet. Could you kindly rephrase it in a simple way so I can help you better?"
+      ]
+    }
+  ]
+}
