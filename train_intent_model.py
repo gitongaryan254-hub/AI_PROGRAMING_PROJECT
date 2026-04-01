@@ -10,11 +10,13 @@ VECTORIZER_FILE = "vectorizer.joblib"
 LABELS_FILE = "labels.json"
 
 def load_intents():
+    """Load intents from the JSON file."""
     with open(INTENTS_FILE, "r", encoding="utf-8") as f:
         data = json.load(f)
     return data["intents"]
 
 def prepare_data(intents):
+    """Prepare texts and labels from intents for training."""
     texts = []
     labels = []
     for intent in intents:
@@ -25,6 +27,7 @@ def prepare_data(intents):
     return texts, labels
 
 def main():
+    """Train the intent classification model and save it."""
     intents = load_intents()
     texts, labels = prepare_data(intents)
 

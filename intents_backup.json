@@ -85,7 +85,7 @@
         "how can i register for the program"
       ],
       "responses": [
-        "Registering for a course typically involves several steps to ensure you're officially enrolled and have access to resources. First, log in to your school's student portal using your credentials—if you don't have them, contact the ICT or admissions office to set up an account. Once logged in, navigate to the 'Courses' or 'Registration' section, which might be under 'Academics' or 'Enrollment.' Search for the specific course (e.g., cybersecurity unit) using keywords or course codes. Check for prerequisites, availability, and any restrictions. Click 'Enroll' or 'Add to Cart'—some systems require approval from advisors. Pay any required fees if applicable, and confirm your schedule to avoid conflicts. After enrollment, you'll receive confirmation via email or the portal, and you may need to access learning materials through a separate platform like Moodle or Canvas. If you encounter issues like full classes or technical problems, take a screenshot and contact support immediately. Deadlines are important—missed registrations can delay your studies. For detailed guidance, refer to your school's registration handbook or visit the registrar's office in person."
+        "To register, log in to the student portal, open the 'Courses' or 'Registration' section, search for your course, and click 'Enroll'. If you get stuck, kindly take a screenshot and contact the ICT or registrar's office so they can guide you step by step."
       ]
     },
 
@@ -113,7 +113,7 @@
         "course fees"
       ],
       "responses": [
-        "Course fees vary widely depending on the institution, program type, and location. For detailed information, consult the official fee structure available on your school's finance office website or student portal. Many programs, especially public universities, have subsidized rates for local students, while international or private institutions may charge higher amounts. Fees often cover tuition, lab access, materials, and sometimes certifications. Additional costs might include textbooks, software licenses, or exam fees for external certifications like CompTIA. Scholarships, grants, or payment plans are frequently available to reduce financial burden—check with the financial aid office early. If you're unsure about breakdowns, contact the bursar's office for a personalized estimate based on your enrollment status. Keep records of all payments and receipts for your academic file."
+        "For fee details, please refer to the official fee structure from the finance office or the school website. Most courses are part of your normal program fees, but extra certifications may have separate charges."
       ]
     },
 
@@ -194,7 +194,7 @@
         "scholarship options"
       ],
       "responses": [
-        "Scholarships and financial aid can significantly ease the cost of education. Visit your school's finance or student services office website to explore available options, which may include merit-based scholarships (awarded for academic achievement), need-based aid (based on financial circumstances), or specific grants for fields like cybersecurity. Application processes typically require submitting forms, transcripts, essays, or recommendation letters. Deadlines are often well before course start dates, so apply early—some scholarships are competitive. Additionally, external organizations like government agencies, private foundations, or tech companies offer funding for STEM fields. Check eligibility criteria carefully, as some require certain GPAs, citizenship, or enrollment status. If you qualify for multiple, you may be able to combine them. Contact the financial aid advisor for guidance on applications and to discuss your situation confidentially."
+        "For scholarships and financial aid, visit the finance or student services office or the school website. Look for scholarship and bursary sections, and note the application deadlines carefully."
       ]
     },
 
@@ -285,7 +285,7 @@
         "how can i focus on studies"
       ],
       "responses": [
-        "Effective studying in technical fields like cybersecurity requires a structured approach to build and retain knowledge. Start by creating a realistic weekly schedule, allocating specific times for theory, practice, and review—consistency is more important than cramming. Break down complex topics into smaller, manageable chunks; for example, learn one concept per session, like basic networking, then immediately apply it through hands-on labs or simulations. Use active learning techniques: explain concepts aloud, teach them to someone else, or create mind maps. Incorporate practical exercises—cybersecurity is hands-on, so use tools like virtual machines, CTF challenges, or platforms like TryHackMe. Take detailed notes using methods like Cornell (dividing pages into sections for cues, main notes, and summaries) or digital tools like Notion. Regularly review material using spaced repetition (reviewing at increasing intervals) to move knowledge from short-term to long-term memory. Don't neglect soft skills like problem-solving and communication. Track your progress, celebrate small wins, and seek feedback from instructors or peers. If you're struggling, identify weak areas early and ask for help—resources like online forums, study groups, or tutoring can make a big difference. Remember, mastery comes from deliberate practice, not just reading."
+        "Make a simple weekly plan, study a bit every day, and always practice questions or labs after you learn new theory. Use short notes, quizzes, or flashcards, and ask questions early when something is not clear."
       ]
     },
 
@@ -351,7 +351,7 @@
         "what does cyber mean"
       ],
       "responses": [
-        "Cybersecurity is a critical field focused on protecting digital systems, networks, and data from unauthorized access, attacks, and damage. It involves a wide range of practices, technologies, and strategies to safeguard information in an increasingly connected world. At its core, cybersecurity aims to ensure confidentiality (keeping data private), integrity (ensuring data accuracy and trustworthiness), and availability (making sure systems are accessible when needed). Common threats include malware, phishing, ransomware, and data breaches. Professionals in this field use tools like firewalls, encryption, intrusion detection systems, and ethical hacking techniques. It's a growing industry with high demand for skilled experts, and it can feel challenging at first, but with step-by-step learning and practice, it becomes manageable. If you're new to it, start with basics like understanding networks and common vulnerabilities—many resources are available online and through courses."
+        "Cybersecurity is protecting computers, networks, and data from attacks, damage, or unauthorized access. It is like putting locks, alarms, and guards around your digital information. It can feel hard at the beginning, but it becomes easier when you take it step by step and keep practicing. Feeling confused at first is normal, not a sign that you are weak."
       ]
     },
 
@@ -365,7 +365,7 @@
         "do i need to know programming"
       ],
       "responses": [
-        "While you don't need to be an expert programmer to start in cybersecurity, coding skills are highly valuable and often essential for advanced roles. Languages like Python are particularly useful because they're beginner-friendly and widely used in cybersecurity for tasks such as scripting automation, analyzing data, building tools, and even writing exploits or defenses. Other languages like Bash (for Linux scripting), JavaScript (for web security), or C/C++ (for low-level system work) can also be beneficial. Key skills include understanding programming fundamentals like variables, loops, functions, and data structures, as well as applying them to security contexts, such as writing scripts to scan for vulnerabilities or automate repetitive tasks. Many cybersecurity professionals learn coding on the job or through self-study. If you're new, start with Python—it's versatile and has a gentle learning curve. Resources like free online tutorials, Codecademy, or books like 'Automate the Boring Stuff with Python' can help. Over time, coding will enhance your problem-solving abilities and open up more career opportunities in areas like penetration testing, security analysis, or development of security tools."
+        "You do not need to be a coding expert to begin, but learning some programming helps a lot. Languages like Python are friendly for beginners. Start small with simple scripts, and over time you will be comfortable automating tasks and analyzing data. Useful skills for cybersecurity include: basic networking, Linux commands, scripting (for example in Python), problem‑solving, attention to detail, and good communication. Start with the basics and build one layer at a time. 💻"
       ]
     },
 
@@ -379,7 +379,7 @@
         "what job can i get with cyber"
       ],
       "responses": [
-        "Cybersecurity offers a diverse and rewarding career path with numerous roles that cater to different interests and skill levels. Entry-level positions like security analyst or junior penetration tester involve monitoring systems, identifying vulnerabilities, and responding to incidents. As you gain experience, you can move into specialized areas such as ethical hacking (penetration testing), incident response, security engineering, or compliance roles. Advanced positions include chief information security officer (CISO) or security architect, where you design and oversee entire security frameworks. Salaries vary by location, experience, and certifications, but in many regions, cybersecurity professionals earn competitive pay—entry-level roles might start at $50,000–$70,000 annually, while experienced experts can earn $100,000+ or more. The field is growing rapidly due to increasing cyber threats, with strong job security and opportunities in industries like finance, healthcare, government, and tech. To get started, focus on building foundational knowledge in networking, operating systems, and security principles, then pursue certifications like CompTIA Security+ or CISSP. Continuous learning is key, as the field evolves with new technologies like AI-driven security and cloud computing."
+        "Cybersecurity offers many careers: security analyst, penetration tester, SOC analyst, security engineer, incident responder, and more. Salaries depend on country, experience, and certifications, but the field is growing with strong demand. With consistent effort and good fundamentals, you can build a solid career here. 💼"
       ]
     },
 
@@ -432,7 +432,7 @@
         "kali linux explained"
       ],
       "responses": [
-        "Kali Linux is a Debian-based Linux distribution specifically designed for penetration testing, ethical hacking, and digital forensics. Developed and maintained by Offensive Security, it was first released in 2013 as a successor to BackTrack. Kali comes pre-installed with over 600 security tools, organized into categories like information gathering, vulnerability assessment, web application analysis, password cracking, wireless testing, exploitation, and forensics. This makes it a comprehensive toolkit for security professionals to simulate attacks, identify weaknesses, and improve defenses in controlled environments. Unlike general-purpose OSes, Kali is lightweight, runs from a live USB, and includes features like anonymity tools (e.g., Tor) and hardware support for various devices. It's built for ethical use only—emphasizing legal and authorized testing. In cybersecurity education, Kali is invaluable for hands-on labs, teaching concepts like network scanning, exploitation, and incident response. To use it safely, always obtain permission before testing any system, and start with basic Linux commands before diving into tools. Kali is free, open-source, and regularly updated to include the latest security software."
+        "Kali Linux 🐉 is a special Linux distribution designed for ethical hacking and penetration testing. It comes with many security tools preinstalled so professionals and students can test networks and applications in a controlled, legal environment. It is for learning and authorized security testing only, not for attacking random systems."
       ]
     },
 
@@ -449,6 +449,7 @@
       ]
     },
 
+
     {
       "tag": "kali_basic_commands",
       "patterns": [
@@ -461,6 +462,7 @@
         "Start with basic Linux commands in Kali: `pwd` (show where you are), `ls` (list files), `cd foldername` (change folder), `mkdir name` (create a folder), `touch file.py` (create a file), `cp` and `mv` to copy/move, `rm` to remove, and `clear` to clean the screen. Practice these first before touching hacking tools so you are comfortable in the terminal. ⌨️"
       ]
     },
+
 
     {
       "tag": "kali_tool_categories",
@@ -522,7 +524,7 @@
         "is python good for beginners"
       ],
       "responses": [
-        "Python is a high-level, versatile programming language known for its simplicity and readability, making it an excellent choice for beginners and professionals alike. Created by Guido van Rossum in 1991, Python emphasizes code readability with its clean syntax that uses indentation instead of braces. It's widely used in web development (e.g., with frameworks like Django or Flask), data analysis and machine learning (via libraries like Pandas, NumPy, and TensorFlow), automation, scientific computing, and increasingly in cybersecurity for scripting tasks like network scanning, data parsing, or building security tools. Python's popularity stems from its extensive standard library, cross-platform compatibility (runs on Windows, macOS, Linux), and a large, supportive community. For beginners, it's forgiving—fewer syntax errors compared to languages like C++ or Java. You can start by installing Python from python.org, using an IDE like VS Code or PyCharm, and writing simple programs. Resources include the official Python documentation, freeCodeCamp, or books like 'Python Crash Course.' In cybersecurity, Python is invaluable for tasks like writing custom scripts for vulnerability scanning or automating repetitive security checks."
+        "Python is a popular, beginner‑friendly programming language used for web development, data analysis, automation, AI, and cybersecurity scripting. It is known for simple, readable code and is a great first language to learn. 🐍"
       ]
     },
 
@@ -548,7 +550,7 @@
         "execute python in vs code"
       ],
       "responses": [
-        "Running Python code is straightforward once set up. First, ensure Python is installed (check with 'python --version' in the terminal). Use an IDE like VS Code (install the Python extension for features like debugging), PyCharm, or even the built-in IDLE. Create a new file with a .py extension, write your code (e.g., print('Hello, World!')), and save it. In VS Code, right-click the file and select 'Run Python File in Terminal' or use the play button. Alternatively, open a terminal, navigate to the file's directory with 'cd path/to/file', and run 'python filename.py'. For interactive coding, use the Python shell by typing 'python' in the terminal—enter commands directly and see immediate output. If using virtual environments (recommended for projects), activate it first with 'source venv/bin/activate' (Linux/Mac) or 'venv\\Scripts\\activate' (Windows). Handle errors by checking syntax, imports, and paths. For web or GUI apps, additional setup like Flask or Tkinter may be needed."
+        "To run Python: open IDLE or VS Code, create a file ending with `.py`, write your code, then run it. In VS Code, install the Python extension, open your file, and press Run ▶ or use the terminal: `python yourfile.py`."
       ]
     },
 
@@ -564,6 +566,7 @@
       ]
     },
 
+
     {
       "tag": "git_concept",
       "patterns": [
@@ -572,7 +575,7 @@
         "why use git"
       ],
       "responses": [
-        "Git is a distributed version control system developed by Linus Torvalds in 2005, primarily to manage the Linux kernel's source code. It allows developers to track changes in their codebase over time, collaborate efficiently, and maintain a history of modifications. Unlike centralized systems, Git stores the entire repository (including history) on every user's local machine, enabling offline work and reducing reliance on a central server. Key concepts include commits (snapshots of changes), branches (parallel development lines), merges (combining branches), and pull requests (proposals for changes). Git excels at handling non-linear development, making it easy to experiment with features without affecting the main codebase. It's essential for modern software development, enabling teams to work on the same project simultaneously without conflicts. In cybersecurity, Git is used for version-controlling security scripts, configurations, or even tracking changes in vulnerability databases. To get started, install Git from git-scm.com, initialize a repository with 'git init', and learn basic commands like 'git add', 'git commit', and 'git push'. Platforms like GitHub enhance Git's capabilities with collaboration features."
+        "Git is a version control system. It helps you track changes in your code, go back to older versions, and collaborate with others safely. It is a core tool for modern developers."
       ]
     },
 
@@ -608,7 +611,7 @@
         "git config user name and email"
       ],
       "responses": [
-        "To set your Git identity, run:\ngit config --global user.name \"Your Name\"\ngit config --global user.email \"your_email@example.com\""
+        "To set your Git identity, run:\n`git config --global user.name \"Your Name\"`\n`git config --global user.email \"your_email@example.com\"`"
       ]
     },
 
@@ -621,7 +624,7 @@
         "what git commands should i know"
       ],
       "responses": [
-        "Git commands form the backbone of version control. Start with 'git init' to create a new repository in your project folder. Use 'git status' to check the current state of files (staged, unstaged, or untracked). 'git add .' stages all changes for commit, while 'git add filename' stages specific files. 'git commit -m \"message\"' saves a snapshot with a descriptive message. 'git log' shows commit history, useful for tracking changes. For collaboration, 'git remote add origin URL' links to a remote repository like GitHub. 'git push -u origin main' uploads your commits to the remote. 'git pull' fetches and merges changes from the remote. 'git clone URL' copies an entire repository to your machine. 'git branch' lists branches, and 'git checkout branchname' switches between them. 'git merge' combines branches. Practice these in a safe environment, and remember to commit often with clear messages. For advanced use, explore 'git diff' for changes or 'git reset' for undoing commits."
+        "Common Git commands:\n- `git init` → start a repo\n- `git status` → see changes\n- `git add .` → stage changes\n- `git commit -m \"msg\"` → save snapshot\n- `git log` → see history\n- `git remote add origin URL` → link to GitHub\n- `git push -u origin main` → push\n- `git pull` → get latest\n- `git clone URL` → copy a repo"
       ]
     },
 
@@ -634,7 +637,7 @@
         "git push first time"
       ],
       "responses": [
-        "Basic push steps:\n1) git init\n2) git add .\n3) git commit -m \"first commit\"\n4) git remote add origin https://github.com/USERNAME/REPO.git\n5) git push -u origin main"
+        "Basic push steps:\n1) `git init`\n2) `git add .`\n3) `git commit -m \"first commit\"`\n4) `git remote add origin https://github.com/USERNAME/REPO.git`\n5) `git push -u origin main`"
       ]
     },
 
@@ -646,6 +649,96 @@
       ],
       "responses": [
         "Thank you for your question. I'm not fully sure I understand it yet. Could you kindly rephrase it in simple words so I can help you better? You can also type 'help' to see what I can do. 🙂"
+      ]
+    }
+  ]
+}
+      "responses": [
+        "Thank you for chatting with me. I wish you a smooth learning journey. 🌱"
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["thanks", "thank you", "thnx", "appreciate it"],
+      "responses": [
+        "You’re very welcome. I’m glad I could assist you. If you have another question, feel free to ask."
+      ]
+    },
+    {
+      "tag": "register",
+      "patterns": ["how do i register", "how to enroll", "register for course", "enroll in class"],
+      "responses": [
+        "To register, log in to the student portal, open the 'Courses' or 'Registration' section, search for your course, and click 'Enroll'. If you get stuck, kindly take a screenshot and contact the ICT or registrar's office so they can guide you step by step."
+      ]
+    },
+    {
+      "tag": "fees",
+      "patterns": ["how much are the fees", "school fees", "payment for the course", "do i pay extra"],
+      "responses": [
+        "For fee details, please refer to the official fee structure from the finance office or the school website. Most courses are part of your normal program fees, but extra certifications may have separate charges."
+      ]
+    },
+    {
+      "tag": "scholarship",
+      "patterns": ["are there scholarships", "financial aid", "bursary for this course", "can i get funding"],
+      "responses": [
+        "For scholarships and financial aid, visit the finance or student services office or the school website. Look for scholarship and bursary sections, and note the application deadlines carefully."
+      ]
+    },
+    {
+      "tag": "cyber_basics",
+      "patterns": ["what is cybersecurity", "explain cyber security", "why is cybersecurity important", "is cybersecurity hard"],
+      "responses": [
+        "Cybersecurity is protecting computers, networks, and data from attacks, damage, or unauthorized access. It can feel hard at the beginning, but when you take it step by step and practice, it becomes much easier."
+      ]
+    },
+    {
+      "tag": "study_tips",
+      "patterns": ["how do i study", "study tips", "how to pass this course", "i am failing to study"],
+      "responses": [
+        "Make a simple weekly plan, study a bit every day, and practice questions or labs after learning new theory. Use short notes or flashcards, and ask questions early when something is not clear."
+      ]
+    },
+    {
+      "tag": "python_basics",
+      "patterns": ["what is python", "how to start python", "learn python", "use python idle"],
+      "responses": [
+        "Python is a beginner‑friendly programming language used for web development, data analysis, automation, AI, and cybersecurity. Start with variables, if‑statements, loops, functions, and lists, and practice small problems daily."
+      ]
+    },
+    {
+      "tag": "python_run",
+      "patterns": ["how do i run python code", "run python script", "run .py file", "execute python in vs code"],
+      "responses": [
+        "To run Python: open IDLE or VS Code, create a file ending with .py, write your code, then run it. In VS Code, install the Python extension and press Run ▶ or use the terminal: python yourfile.py."
+      ]
+    },
+    {
+      "tag": "git_concept",
+      "patterns": ["what is git", "difference between git and github", "what is github"],
+      "responses": [
+        "Git is a version control system that tracks changes in your code. GitHub is an online platform that hosts Git repositories in the cloud so you can store and share your projects."
+      ]
+    },
+    {
+      "tag": "git_push",
+      "patterns": ["how do i push to github", "push code to github", "upload project to github"],
+      "responses": [
+        "Basic push steps:\n1) git init\n2) git add .\n3) git commit -m \"first commit\"\n4) git remote add origin https://github.com/USERNAME/REPO.git\n5) git push -u origin main"
+      ]
+    },
+    {
+      "tag": "git_commands",
+      "patterns": ["basic git commands", "all git commands i need", "git cheat sheet"],
+      "responses": [
+        "Common Git commands:\n- git init → start a repo\n- git status → see changes\n- git add . → stage changes\n- git commit -m \"msg\" → save snapshot\n- git log → see history\n- git remote add origin URL → link to GitHub\n- git push -u origin main → push\n- git pull → get latest\n- git clone URL → copy a repo"
+      ]
+    },
+    {
+      "tag": "default_fallback",
+      "patterns": ["random text 1", "random text 2"],
+      "responses": [
+        "Thank you for your question. I'm not fully sure I understand it yet. Could you kindly rephrase it in a simple way so I can help you better?"
       ]
     }
   ]
