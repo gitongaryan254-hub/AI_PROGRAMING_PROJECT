@@ -1,5 +1,5 @@
-# C!pher School Bot - Deployment Options
-# This file contains instructions for deploying your bot with custom names
+# cipherschool Chat Bot - Deployment Options
+# This file contains instructions for deploying your bot with a clean branded web interface
 
 ## 🌐 FREE DEPLOYMENT OPTIONS WITH CUSTOM DOMAINS
 
@@ -9,7 +9,7 @@
 # 3. Create new "Web Service"
 # 4. Connect your GitHub repository
 # 5. Set build command: pip install -r requirements.txt
-# 6. Set start command: python public_bot.py
+# 6. Set start command: python fly_app.py
 # 7. Deploy!
 # 8. Add custom domain: cipherschoolbot.com (purchase domain separately)
 
@@ -35,26 +35,17 @@
 ## 📋 REQUIREMENTS.TXT for deployment
 """
 flask
-pyngrok
+gunicorn
 """
-
-## 🚀 QUICK START WITH NGRok (Free)
-# Run: python public_bot.py
-# Get a temporary public URL instantly
-
-## 💎 PAID OPTIONS FOR CUSTOM SUBDOMAIN
-# 1. Ngrok Paid Plan ($5/month): cipherschoolbot.ngrok.io
-# 2. Custom domain ($10-15/year): cipherschoolbot.com
-# 3. Cloudflare Pages + Functions (Free tier)
 
 ## 🔧 MANUAL DEPLOYMENT STEPS
 
 ### Step 1: Create requirements.txt
 echo "flask" > requirements.txt
-echo "pyngrok" >> requirements.txt
+echo "gunicorn" >> requirements.txt
 
 ### Step 2: Test locally
-python public_bot.py
+python fly_app.py
 
 ### Step 3: Deploy to chosen platform
 # Follow platform-specific instructions above

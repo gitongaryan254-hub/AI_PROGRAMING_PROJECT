@@ -1,9 +1,6 @@
 from flask import Flask, render_template_string, request, jsonify
-import json
 import os
 from simple_chat_faq_bot_with_memory import normalize, get_response, load_memory, remember
-from pyngrok import ngrok
-import socket
 
 app = Flask(__name__)
 
@@ -12,32 +9,43 @@ HTML_TEMPLATE = """
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🤖 C!pher School Bot</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🤖 cipherschool Chat Bot</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Bookman Old Style', Bookman, serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: radial-gradient(circle at top left, #b84bff 0%, #541d7d 40%, #270b3f 100%);
             min-height: 100vh;
+            color: white;
         }
         .container {
-            max-width: 800px;
+            max-width: 840px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 26px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: 28px;
+            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
         }
         .header {
             text-align: center;
-            color: white;
-            margin-bottom: 30px;
+            color: #f6f0ff;
+            margin-bottom: 28px;
+        }
+        .header h1,
+        .header p,
+        .welcome-message,
+        .message {
+            font-weight: 700;
         }
         .chat-container {
-            background: white;
-            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.16);
+            border-radius: 22px;
             padding: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.18), 0 12px 30px rgba(0, 0, 0, 0.16);
             height: 600px;
             display: flex;
             flex-direction: column;
@@ -45,63 +53,76 @@ HTML_TEMPLATE = """
         .chat-messages {
             flex: 1;
             overflow-y: auto;
-            padding: 10px;
-            margin-bottom: 20px;
+            padding: 16px;
+            margin-bottom: 18px;
+            background: #ffffff;
+            border-radius: 18px;
+            color: #1a1a1a;
         }
         .message {
             margin-bottom: 15px;
-            padding: 12px;
-            border-radius: 10px;
-            max-width: 70%;
+            padding: 14px;
+            border-radius: 14px;
+            max-width: 72%;
+            font-family: 'Bookman Old Style', Bookman, serif;
+            font-weight: 700;
+            line-height: 1.5;
         }
         .user-message {
-            background: #007bff;
+            background: #6b3cc2;
             color: white;
             margin-left: auto;
             text-align: right;
         }
         .bot-message {
-            background: #f8f9fa;
-            color: #333;
-            border-left: 4px solid #ff6b6b;
+            background: #f5f5f8;
+            color: #2d2d33;
+            border-left: 4px solid #9a4dff;
         }
         .input-container {
             display: flex;
-            gap: 10px;
+            gap: 12px;
         }
         .message-input {
             flex: 1;
-            padding: 12px;
-            border: 2px solid #ddd;
-            border-radius: 25px;
+            padding: 14px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 28px;
             font-size: 16px;
+            font-weight: 700;
             outline: none;
+            background: rgba(255, 255, 255, 0.95);
+            color: #1a1a1a;
+        }
+        .message-input::placeholder {
+            color: #7a6d9d;
         }
         .message-input:focus {
-            border-color: #007bff;
+            border-color: #d7b4ff;
         }
         .send-button {
-            padding: 12px 25px;
-            background: #007bff;
+            padding: 14px 28px;
+            background: #8e44ff;
             color: white;
             border: none;
-            border-radius: 25px;
+            border-radius: 28px;
             cursor: pointer;
             font-size: 16px;
-            transition: background 0.3s;
+            font-weight: 700;
+            transition: background 0.3s ease;
         }
         .send-button:hover {
-            background: #0056b3;
+            background: #6e34c1;
         }
         .welcome-message {
             text-align: center;
-            color: #666;
+            color: #4c3b63;
             font-style: italic;
             margin: 20px 0;
         }
         .stats {
             text-align: center;
-            color: #666;
+            color: #e8e0ff;
             margin-top: 10px;
             font-size: 14px;
         }
@@ -116,7 +137,7 @@ HTML_TEMPLATE = """
 <body>
     <div class="container">
         <div class="header">
-            <div class="brand">C!PHER SCHOOL BOT</div>
+            <div class="brand">cipherschool Chat Bot</div>
             <h1>🤖 Your AI Learning Assistant</h1>
             <p>Expert in Cybersecurity, Python, Git, and School Registration</p>
         </div>
@@ -124,7 +145,7 @@ HTML_TEMPLATE = """
         <div class="chat-container">
             <div id="chat-messages" class="chat-messages">
                 <div class="welcome-message">
-                    <h3>👋 Welcome to C!pher School Bot!</h3>
+                    <h3>👋 Welcome to cipherschool Chat Bot!</h3>
                     <p>I'm your AI assistant specialized in:</p>
                     <ul style="text-align: left; display: inline-block;">
                         <li>🔐 Cybersecurity fundamentals</li>
@@ -158,8 +179,7 @@ HTML_TEMPLATE = """
             if (isUser) {
                 messageDiv.innerHTML = `<strong>You:</strong> ${content}`;
             } else {
-                messageDiv.innerHTML = `<strong>🤖 C!pher:</strong> ${content}`;
-                conversationCount++;
+                    messageDiv.innerHTML = `<strong>🤖 cipherschool:</strong> ${content}`;
                 document.getElementById('stats').innerHTML = `💬 Conversations: ${conversationCount}`;
             }
 
@@ -176,7 +196,6 @@ HTML_TEMPLATE = """
             addMessage(message, true);
             input.value = '';
 
-            // Send message to server
             fetch('/chat', {
                 method: 'POST',
                 headers: {
@@ -200,7 +219,6 @@ HTML_TEMPLATE = """
             }
         }
 
-        // Focus on input when page loads
         document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('message-input').focus();
         });
@@ -222,11 +240,8 @@ def chat():
         if not user_input:
             return jsonify({'reply': 'Please type a message!'})
 
-        # Load memory and get response
         memory = load_memory()
         bot_reply = get_response(user_input)
-
-        # Save to memory
         remember(memory, user_input, bot_reply)
 
         return jsonify({'reply': bot_reply})
@@ -234,56 +249,6 @@ def chat():
     except Exception as e:
         return jsonify({'reply': f'Sorry, there was an error: {str(e)}'})
 
-def setup_ngrok():
-    """Setup ngrok tunnel with custom subdomain"""
-    try:
-        # Kill any existing tunnels
-        ngrok.kill()
-
-        # For free tier, use random subdomain
-        # For custom subdomain like 'cipherschoolbot', you need ngrok paid plan
-        print("🚀 Setting up ngrok tunnel...")
-
-        # Option 1: Free tier (random subdomain)
-        tunnel = ngrok.connect(5000)
-        public_url = tunnel.public_url
-
-        print(f"✅ Free tunnel created: {public_url}")
-        print("💡 For custom subdomain 'cipherschoolbot', upgrade to ngrok paid plan")
-        print("   Visit: https://dashboard.ngrok.com/billing/subscription")
-
-        return public_url
-
-    except Exception as e:
-        print(f"❌ Ngrok setup failed: {e}")
-        return None
-
 if __name__ == '__main__':
-    # Setup ngrok tunnel
-    public_url = setup_ngrok()
-
-    hostname = socket.gethostname()
-    local_ip = socket.gethostbyname(hostname)
-
-    print("\n🤖 C!PHER SCHOOL BOT is running!")
-    print("=" * 50)
-    print(f"💻 Local access: http://localhost:5000")
-    print(f"📱 Network access: http://{local_ip}:5000")
-
-    if public_url:
-        print(f"🌐 Public access: {public_url}")
-        print("   (Share this link to access from anywhere!)")
-
-    print("\n🔥 Custom Domain Options:")
-    print("   1. Ngrok Paid: cipherschoolbot.ngrok.io (requires payment)")
-    print("   2. Deploy to Render/Heroku for free custom domain")
-    print("   3. Use services like 000webhost, infinityfree, etc.")
-
-    print("\n❌ Press Ctrl+C to stop the server")
-    print("=" * 50)
-
-    try:
-        app.run(debug=True, host='0.0.0.0', port=5000)
-    except KeyboardInterrupt:
-        print("\n👋 Shutting down...")
-        ngrok.kill()
+    port = int(os.environ.get('PORT', 8080))
+    app.run(host='0.0.0.0', port=port)

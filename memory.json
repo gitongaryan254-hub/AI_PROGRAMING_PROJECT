@@ -32,38 +32,6 @@
     "bot": "Hello! 😊 What brings you here today? I'm really good with study tips, registration information, cybersecurity questions, Python, and Git interactions. Just mention what you want to dive into and I'll be glad to help! 🤓"
   },
   {
-    "user": "who are you",
-    "bot": "I am a friendly FAQ bot created to help students with cybersecurity, programming, Git, registration, and general school questions. So feel free to ask me any question related to these topics, and I will do my best to assist you! 😊"
-  },
-  {
-    "user": "how should i regester",
-    "bot": "Thank you for your question. I'm not fully sure I understand it yet. Could you kindly rephrase it in a simple way so I can help you better?"
-  },
-  {
-    "user": "whats cybersecurity",
-    "bot": "Cybersecurity is protecting computers, networks, and data from attacks, damage, or unauthorized access. It includes firewalls, encryption, password protection, and security awareness. It is like putting locks, alarms, and guards around your digital information."
-  },
-  {
-    "user": "is cybersecurity hard",
-    "bot": "Cybersecurity can feel hard at the beginning, but it becomes easier when you take it step by step and keep practicing. Feeling confused at first is normal, not a sign that you are weak."
-  },
-  {
-    "user": "help",
-    "bot": "I can help with: registration info, admission requirements, deadlines, fees, scholarships, study tips, cybersecurity basics, why cybersecurity matters, Python installation and basics, Git and GitHub commands, how to push code to GitHub, course structure, assessments, grading, and general school questions. Just ask in simple English and I'll do my best!"
-  },
-  {
-    "user": "git commands",
-    "bot": "Common Git commands:\ngit init  → start a repo\ngit status  → see changes\ngit add .  → stage changes\ngit commit -m \"msg\"  → save snapshot\ngit log  → see history\ngit remote add origin URL  → link to GitHub\ngit push -u origin main  → push\ngit pull  → get latest\ngit clone URL  → copy a repo"
-  },
-  {
-    "user": "whats git add",
-    "bot": "git add stages your changes for commit. Example: git add file.py or git add . to stage all changed files. Think of it as marking what you want to include in your next snapshot."
-  },
-  {
-    "user": "whats git status",
-    "bot": "git status shows which files are changed, staged, or untracked in your working directory. Run it often to stay aware of your project state."
-  },
-  {
     "user": "Hello",
     "bot": "Hello! 😊 What brings you here today? I'm really good with study tips, registration information, cybersecurity questions, Python, and Git interactions. Just mention what you want to dive into and I'll be glad to help! 🤓"
   },
@@ -72,15 +40,63 @@
     "bot": "I am a friendly FAQ bot created to help students with cybersecurity, programming, Git, registration, and general school questions. So feel free to ask me any question related to these topics, and I will do my best to assist you! 😊"
   },
   {
-    "user": "hello",
-    "bot": "Hello! 😊 What brings you here today? I'm really good with study tips, registration information, cybersecurity questions, Python, and Git interactions. Just mention what you want to dive into and I'll be glad to help! 🤓"
+    "user": "What is git control",
+    "bot": "Git is a version control system. It helps you track changes in your code, go back to older versions, and collaborate with others safely."
   },
   {
-    "user": "learn",
+    "user": "How to use kali linux",
     "bot": "Thank you for your question. I'm not fully sure I understand it yet. Could you kindly rephrase it in a simple way so I can help you better?"
   },
   {
-    "user": "Hello",
-    "bot": "Hello! 😊 What brings you here today? I'm really good with study tips, registration information, cybersecurity questions, Python, and Git interactions. Just mention what you want to dive into and I'll be glad to help! 🤓"
+    "user": "Whats kali linux",
+    "bot": "Thank you for your question. I'm not fully sure I understand it yet. Could you kindly rephrase it in a simple way so I can help you better?"
+  },
+  {
+    "user": "How to regester for school",
+    "bot": "Thank you for your question. I'm not fully sure I understand it yet. Could you kindly rephrase it in a simple way so I can help you better?"
+  },
+  {
+    "user": "How to regerster for a course",
+    "bot": "Thank you for your question. I'm not fully sure I understand it yet. Could you kindly rephrase it in a simple way so I can help you better?"
+  },
+  {
+    "user": "How to apply for a course",
+    "bot": "To apply for a course, go to the school website and open the 'Admissions' or 'Apply Now' section. Fill in the form, upload your documents, and follow the payment instructions. If you need help, contact the admissions or registrar’s office."
+  },
+  {
+    "user": "Is cybersecurity hard",
+    "bot": "Cybersecurity can feel hard at the beginning, but it becomes easier when you take it step by step and keep practicing. Feeling confused at first is normal, not a sign that you are weak."
+  },
+  {
+    "user": "Do i need to be a good coder",
+    "bot": "Thank you for your question. I'm not fully sure I understand it yet. Could you kindly rephrase it in a simple way so I can help you better?"
+  },
+  {
+    "user": "Do i need codding",
+    "bot": "Thank you for your question. I'm not fully sure I understand it yet. Could you kindly rephrase it in a simple way so I can help you better?"
+  },
+  {
+    "user": "Whats python",
+    "bot": "Thank you for your question. I'm not fully sure I understand it yet. Could you kindly rephrase it in a simple way so I can help you better?"
+  },
+  {
+    "user": "Whats scripting",
+    "bot": "Thank you for your question. I'm not fully sure I understand it yet. Could you kindly rephrase it in a simple way so I can help you better?"
+  },
+  {
+    "user": "How long will it take me to complete my course",
+    "bot": "Most standard courses run for one semester or a few months. Short trainings or bootcamps are more intensive and can last from a few days to a few weeks."
+  },
+  {
+    "user": "How many hours per week will be visiting the school",
+    "bot": "Plan around 6‐9 hours per week for a technical course: watching lessons, doing labs, and revising. Small, regular study sessions work better than last‑minute cramming. Don't rush—understanding concepts deeply is more important than speed."
+  },
+  {
+    "user": "What is python",
+    "bot": "Python is a popular, beginner‑friendly programming language used for web development, data analysis, automation, AI, and cybersecurity scripting. It is known for simple, readable code and is one of the most in-demand languages in tech today. Many cybersecurity professionals use Python for writing security tools and automating tasks."
+  },
+  {
+    "user": "How to install python",
+    "bot": "To install Python: go to python.org, download the latest stable version, run the installer, and select 'Add Python to PATH'. This is important! On Linux, use your package manager such as apt or dnf. On Mac, you can download directly or use Homebrew. After installation, open a terminal and type 'python --version' to verify."
   }
 ]

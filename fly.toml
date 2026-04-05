@@ -1,0 +1,7 @@
+app = "cipherschoolbot"
+
+[build]
+  image = "Dockerfile"
+
+[env]
+  PORT = "8080"
