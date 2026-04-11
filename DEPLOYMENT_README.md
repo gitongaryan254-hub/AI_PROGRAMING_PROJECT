@@ -56,3 +56,19 @@ python fly_app.py
 
 ## 📞 SUPPORT
 # If you need help with any deployment option, let me know!
+
+## ✅ QUICK NO-CARD DEPLOY (RENDER)
+
+1. Push this project to GitHub (main branch).
+2. Go to https://render.com and sign in with GitHub.
+3. Click New + -> Blueprint.
+4. Select your repository.
+5. Render will detect `render.yaml` automatically.
+6. Click Apply to create and deploy the free web service.
+7. Open the generated URL: `https://<your-service-name>.onrender.com`
+
+### If deploy fails
+- Confirm `requirements.txt` contains:
+	- flask
+	- gunicorn
+- Confirm start command in Render service is: `gunicorn fly_app:app`
